@@ -1,6 +1,19 @@
 Change Log
 ==========
 
+Version 2.0.4 *(2015-08-21)*
+----------------------------
+
+ * New: Support the "full" and "adaptive" styles of 'fit-in' (along with its normal behavior) with a
+   method overload and new `FitInStyle` enum.
+
+
+Version 2.0.3 *(2015-07-15)*
+----------------------------
+
+ * New: `noUpscale()` and `rotate()` filters.
+
+
 Version 2.0.2 *(2014-04-20)*
 ----------------------------
 
