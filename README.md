@@ -11,18 +11,18 @@ This library is also fully compatible with the Android platform.
 Download
 --------
 
-Download [the latest JAR][2] or grab via Maven:
+Download [the latest JAR][2] or grab via Gradle:
+```groovy
+implementation 'com.squareup:pollexor:3.0.0'
+```
 
+or Maven:
 ```xml
 <dependency>
   <groupId>com.squareup</groupId>
   <artifactId>pollexor</artifactId>
-  <version>2.0.4</version>
+  <version>3.0.0</version>
 </dependency>
-```
-or Gradle:
-```groovy
-compile 'com.squareup:pollexor:2.0.4'
 ```
 
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
@@ -72,9 +72,6 @@ thumbor.buildImage("http://example.com/background.png")
 // Produces: /unsafe/200x100/filters:round_corner(10,255,255,255):watermark(/unsafe/200x100/example.com/overlay1.png,0,0,0):watermark(/unsafe/50x50/example.com/overlay2.png,75,25,0):quality(85)/example.com/background.png
 ```
 
-*Note:* If you are using a version of Thumbor older than 3.0 you must call
-`legacy()` to ensure the encryption used will be supported by the server.
-
 
 
 License
@@ -97,4 +94,4 @@ License
 
  [1]: https://github.com/globocom/thumbor
  [2]: https://search.maven.org/remote_content?g=com.squareup&a=pollexor&v=LATEST
- [snap]: https://oss.sonatype.org/content/repositories/snapshots/
+ [snap]: https://s01.oss.sonatype.org/content/repositories/snapshots/

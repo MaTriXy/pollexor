@@ -1,0 +1,41 @@
+buildscript {
+  dependencies {
+    classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
+  }
+
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'java-library'
+apply plugin: 'com.vanniktech.maven.publish'
+
+dependencies {
+  testImplementation 'junit:junit:4.13.2'
+  testImplementation 'org.easytesting:fest-assert-core:2.0M10'
+}
+
+repositories {
+  mavenCentral()
+}
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(8)
+  }
+}
+
+javadoc {
+  options.addBooleanOption('html5', false)
+}
+
+mavenPublish {
+  sonatypeHost = 'S01'
+}
+
+signing {
+  def signingKey = findProperty('signingKey')
+  def signingPassword = ''
+  useInMemoryPgpKeys(signingKey, signingPassword)
+}
